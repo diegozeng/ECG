@@ -8,7 +8,7 @@
 %htan     qt = b + a * tgh(rr)
 %ahs      qt = b + a * arcsinh(rr)
 %ahc      qt = b + a * arccosh(rr+1)
-function[r] = regress10(qt,rr,plot_outcome)
+function[r] = Regress10(qt,rr,plot_outcome)
 lnrr = log(rr);
 o = ones(size(rr));
 r.lin   = regress(qt,      [o rr]);         %qt = b + a * rr

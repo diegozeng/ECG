@@ -1,4 +1,4 @@
-function[rv] = RV(wave,Rnum,cell)
+function[rv] = WaveFeatures(wave,Rnum,cell)
 rv.MEAN = mean(wave)*cell;
 rv.SDNN = std(wave)*cell;
 fiveMinutes = 5000 / cell;
@@ -60,5 +60,5 @@ for i = 16:len-16
 end
 X = X / ACnum;
 Z = Z / ACnum;
-rv.DC = (X(16) + X(17) - X(15) - X(14))*cell/4;      %DC的值
-rv.AC = (Z(16) + Z(17) - Z(15) - Z(14))*cell/4;      %AC的值
+rv.DC = (X(16) + X(17) - X(15) - X(14))*cell/4;
+rv.AC = (Z(16) + Z(17) - Z(15) - Z(14))*cell/4;
